@@ -1,0 +1,77 @@
+.creator-block-tech-review {
+	margin-bottom: 2rem;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 1.5rem;
+	background: #fff;
+}
+
+.product-title {
+	margin-top: 0;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.specs-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 2rem;
+}
+
+.specs-table th, .specs-table td {
+	padding: 0.75rem;
+	border-bottom: 1px solid #eee;
+}
+
+.specs-table th {
+	background-color: #f9f9f9;
+	text-align: left;
+}
+
+.spec-label {
+	font-weight: bold;
+	width: 40%;
+}
+
+.pros-cons-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+	.pros-cons-container {
+		flex-direction: row;
+	}
+}
+
+.pros-column, .cons-column {
+	flex: 1;
+}
+
+.pros-column h4, .cons-column h4 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid;
+}
+
+.pros-column h4 {
+	border-color: #27ae60;
+	color: #27ae60;
+}
+
+.cons-column h4 {
+	border-color: #c0392b;
+	color: #c0392b;
+}
+
+.pros-column ul, .cons-column ul {
+	padding-left: 1.2rem;
+	margin: 0;
+}
+
+.affiliate-cta {
+	text-align: center;
+}

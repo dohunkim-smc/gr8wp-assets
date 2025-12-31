@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "creator-blocks/tech-review",
+	"version": "1.0.0",
+	"title": "Tech Review Specs",
+	"category": "widgets",
+	"icon": "desktop",
+	"description": "Tech specifications table with Pros/Cons and Product Schema.",
+	"attributes": {
+		"productName": {
+			"type": "string",
+			"default": ""
+		},
+		"specs": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object"
+			}
+		},
+		"pros": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "string"
+			}
+		},
+		"cons": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "string"
+			}
+		},
+		"affiliateLink": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "creator-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

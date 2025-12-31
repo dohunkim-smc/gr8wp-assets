@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "creator-blocks/food-review",
+	"version": "1.0.0",
+	"title": "Food Review Card",
+	"category": "widgets",
+	"icon": "location-alt",
+	"description": "A review card for food and places with LocalBusiness Schema.",
+	"attributes": {
+		"storeName": {
+			"type": "string",
+			"default": ""
+		},
+		"rating": {
+			"type": "number",
+			"default": 5
+		},
+		"reviewText": {
+			"type": "string",
+			"default": ""
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		},
+		"mapEmbed": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "creator-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "creator-blocks/dev-chat",
+	"version": "1.0.0",
+	"title": "Dev Chat Log",
+	"category": "widgets",
+	"icon": "format-chat",
+	"description": "A chat-style block to display LLM prompts and responses.",
+	"attributes": {
+		"messages": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object"
+			}
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "creator-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
