@@ -1,6 +1,6 @@
 {
   "name": "creator-blocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of custom blocks for content creators.",
   "main": "build/index.js",
   "scripts": {
@@ -16,6 +16,6 @@
   "author": "Jules",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "@wordpress/scripts": "^30.0.0"
+    "@wordpress/scripts": "^31.0.0"
   }
 }

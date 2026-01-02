@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Creator Blocks
  * Description: Custom blocks for Reviewers and Creators (Food, Music, Tech, Dev).
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Jules
  * License: GPL-2.0-or-later
  * Text Domain: creator-blocks
