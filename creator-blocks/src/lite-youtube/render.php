@@ -1,4 +1,10 @@
 <?php
+/**
+ * Render template for Lite YouTube block.
+ *
+ * @package CreatorBlocks
+ */
+
 $attributes = $attributes ?? [];
 $video_url   = $attributes['videoUrl'] ?? '';
 $video_id    = $attributes['videoId'] ?? '';
@@ -12,14 +18,14 @@ if ( ! $video_id ) {
 $thumbnail_url = "https://img.youtube.com/vi/{$video_id}/hqdefault.jpg";
 $embed_url     = "https://www.youtube.com/embed/{$video_id}?autoplay=1";
 
-// Schema JSON-LD
+// Construct Schema.org JSON-LD data for VideoObject
 $schema = [
 	'@context'     => 'https://schema.org',
 	'@type'        => 'VideoObject',
 	'name'         => $title,
 	'description'  => $description ?: $title,
 	'thumbnailUrl' => [ $thumbnail_url ],
-	'uploadDate'   => get_the_date( 'c' ), // Fallback to post date
+	'uploadDate'   => get_the_date( 'c' ), // Fallback to post date if no upload date
 	'contentUrl'   => $video_url,
 	'embedUrl'     => $embed_url,
 ];
