@@ -1,4 +1,10 @@
 <?php
+/**
+ * Render template for Tech Review block.
+ *
+ * @package CreatorBlocks
+ */
+
 $attributes = $attributes ?? [];
 $product_name  = $attributes['productName'] ?? '';
 $specs         = $attributes['specs'] ?? [];
@@ -14,7 +20,7 @@ foreach ( $specs as $spec ) {
 	}
 }
 
-// Schema JSON-LD
+// Construct Schema.org JSON-LD data for Product
 $schema = [
 	'@context' => 'https://schema.org',
 	'@type'    => 'Product',

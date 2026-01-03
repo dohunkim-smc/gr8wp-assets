@@ -1,4 +1,10 @@
 <?php
+/**
+ * Render template for Food Review block.
+ *
+ * @package CreatorBlocks
+ */
+
 $attributes = $attributes ?? [];
 $store_name = $attributes['storeName'] ?? '';
 $rating     = $attributes['rating'] ?? 5;
@@ -6,7 +12,7 @@ $review_text = $attributes['reviewText'] ?? '';
 $image_url  = $attributes['imageUrl'] ?? '';
 $map_embed  = $attributes['mapEmbed'] ?? '';
 
-// Schema JSON-LD
+// Construct Schema.org JSON-LD data for Restaurant
 $schema = [
 	'@context' => 'https://schema.org',
 	'@type'    => 'Restaurant',
@@ -21,7 +27,7 @@ $schema = [
 		],
 		'author'        => [
 			'@type' => 'Person',
-			'name'  => get_the_author(), // Simple fallback
+			'name'  => get_the_author(), // Simple fallback to post author
 		],
 		'reviewBody'    => wp_strip_all_tags( $review_text ),
 	],
@@ -49,7 +55,7 @@ $schema = [
 
 	<?php if ( $map_embed ) : ?>
 		<div class="food-review-map">
-			<?php echo $map_embed; // Allow iframe ?>
+			<?php echo $map_embed; // Allow safe iframe embed ?>
 		</div>
 	<?php endif; ?>
 
