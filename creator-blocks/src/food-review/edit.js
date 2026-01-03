@@ -61,7 +61,26 @@ export default function Edit( { attributes, setAttributes } ) {
 					placeholder="Store Name..."
 				/>
 				<div className="rating-display">
-					{ '⭐'.repeat( Math.floor( rating ) ) } ({ rating } / 5)
+					{ [ 1, 2, 3, 4, 5 ].map( ( index ) => (
+						<span
+							key={ index }
+							onClick={ () => setAttributes( { rating: index } ) }
+							style={ {
+								cursor: 'pointer',
+								opacity: index <= rating ? 1 : 0.25,
+							} }
+							role="button"
+							tabIndex={ 0 }
+							onKeyDown={ ( e ) => {
+								if ( e.key === 'Enter' || e.key === ' ' ) {
+									setAttributes( { rating: index } );
+								}
+							} }
+						>
+							⭐
+						</span>
+					) ) }
+					<span style={ { marginLeft: '8px' } }>({ rating } / 5)</span>
 				</div>
 				<RichText
 					tagName="p"
